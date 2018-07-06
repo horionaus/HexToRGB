@@ -46,11 +46,9 @@ int main() {
   pc.baud(9600);
   char str[8];
   for (;;) {
-    //if (pc.readable())
-    while(char c = pc.getc()) !
-    //pc.gets(str, 8);
+    pc.gets(str, 8);
     vector<int> v;
-    v = HexadecimalToRGB("1#0d98ba");
+    v = HexadecimalToRGB(str);
     if (v[0]) {
       led_r = v[1] / 255;
       led_g = v[2] / 255;
